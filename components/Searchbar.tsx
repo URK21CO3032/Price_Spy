@@ -35,7 +35,7 @@ const Searchbar = () => {
 
     const isValidLink = isValidAmazonProductURL(searchPrompt);
 
-    if(!isValidLink) return alert('Please provide a valid Amazon link')
+    if(!isValidLink) return alert('only Amazon Link For Now! ')
 
     try {
       setIsLoading(true);
@@ -62,7 +62,7 @@ const Searchbar = () => {
         type="text"
         value={searchPrompt}
         onChange={(e) => setSearchPrompt(e.target.value)}
-        placeholder="Enter product link"
+        placeholder="Please Enter Amazon's product link and Scroll Down"
         className="searchbar-input"
       />
 
@@ -73,9 +73,7 @@ const Searchbar = () => {
       >
         {isLoading ? 'Searching...' : 'Search'}
       </button> 
-      <button>
-      <p>Scroll Down <br /> To View <br />your Product</p>
-      </button>
+      
       
       
     </form>
